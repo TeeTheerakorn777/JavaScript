@@ -1,5 +1,21 @@
 const timeEl = document.querySelector(".time")
 const btn = document.querySelector(".toggle")
+const dayEl = document.querySelector(".day")
+const monthAll = [
+    "มกราคม",
+    "กุมภาพันธ์",
+    "มีนาคม",
+    "เมษายน",
+    "พฤษภาคม",
+    "มิถุนายน",
+    "กรกฎาคม",
+    "สิงหาคม",
+    "กันยายน",
+    "ตุลาคม",
+    "พฤศจิกายน",
+    "ธันวาคม"
+];
+
 
 function setTime() {
     const time = new Date()
@@ -11,6 +27,16 @@ function setTime() {
     ${seconds < 10 ? `0${seconds}` : seconds}`
 }
 
+function setDay() {
+    const date = new Date();
+    const day = date.getDate(); // แก้ไขให้ใช้ getDate() เพื่อดึงวันที่
+    const month = date.getMonth();
+    const monthName = monthAll[month];
+    const year = date.getFullYear() + 543; //แปลงเป็น พ.ศ.
+    dayEl.innerHTML = `วันที่ ${day}  ${monthName}  ${year}`;
+  }
+
+setDay()
 // setInterval(() => {
 //     timeEl.innerText = new Date().toLocaleString()
 // }, 1000)
