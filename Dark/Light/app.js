@@ -10,7 +10,7 @@ function setTime() {
     ${minutes < 10 ? `0${minutes}` : minutes} : 
     ${seconds < 10 ? `0${seconds}` : seconds}`
 }
-
+fsdddddddddddddddddddddddddddddddddddddd
 // setInterval(() => {
 //     timeEl.innerText = new Date().toLocaleString()
 // }, 1000)
