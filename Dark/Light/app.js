@@ -11,6 +11,10 @@ function setTime() {
     ${seconds < 10 ? `0${seconds}` : seconds}`
 }
 
+// setInterval(() => {
+//     timeEl.innerText = new Date().toLocaleString()
+// }, 1000)
+
 btn.addEventListener("click",(e)=>{
     const html=document.querySelector('html')
     if(html.classList.contains("dark")){
