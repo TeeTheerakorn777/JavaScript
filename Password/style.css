@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.form-c {
+    position: relative;
+    margin: 20px 0;
+    width: 300px;
+}
+
+.form-c input {
+    border: 0;
+    border-bottom: 1px solid orange;
+    outline: none;
+    font-size: 20px;
+    display: block;
+    width: 100%;
+}
+
+.btn {
+    cursor: pointer;
+    width: 100%;
+    padding: .5rem 0;
+    outline: none;
+    border: none;
+    color: aliceblue;
+    background: rgb(11, 103, 25);
+    border-radius: 4px;
+}
+
+i {
+    position: absolute;
+    right: 1.2rem;
+    top: 1.3rem;
+    cursor: pointer;
+}
+
+
+

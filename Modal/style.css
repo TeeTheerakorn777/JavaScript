@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.8rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+}
+
+button {
+    border: none;
+    background: #47a386;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.modal-container {
+    position: fixed;
+    pointer-events: none; /*ไม่ให้กด Modal ได้*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.modal {
+    background: #fff;
+    border-radius: 6px;
+    width: 540px;
+    padding: 1rem 3rem;
+}
+
+.modal p,h1 {
+    margin: 1rem 0;
+}
+
+.modal button {
+    float: right;
+}
+
+.show {
+    opacity: 1;
+    pointer-events: auto;
+}
