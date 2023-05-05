@@ -69,10 +69,13 @@ section {
     padding: 5rem 0;
 }
 
-.box {
+.box, .box2, .box3 {
     border: 1px solid gray;
     padding: 2rem;
     margin-top: 4rem;
+    transform: translateY(10rem);
+    transition: all 0.3s;
+    opacity: 0;
 }
 
 h2 {
@@ -142,4 +145,10 @@ h2 {
     background: skyblue;
     color: #fff;
     transition: all 0.3s ease-in;
+}
+
+.show-product {
+    transform: translateY(0);
+    transition: all 0.3s;
+    opacity: 1;
 }

@@ -7,7 +7,7 @@ function scrollProgress() {
     const pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
     const scrollTop = document.documentElement.scrollTop
     const scrollPercentage = (scrollTop / pageHeight) * 100
-    
+
     // แสดง progress bar
     progressEl.style.visibility = "visible"
     progressEl.style.width = scrollPercentage + "%"
@@ -42,7 +42,7 @@ function scrollToTop() {
 
 // ฟังก์ชันนี้ใช้สำหรับแปะแนว header เมื่อเลื่อนหน้าเว็บลงมา
 const header = document.querySelector(".header1")
-window.addEventListener("scroll",stickNavbar)
+window.addEventListener("scroll", stickNavbar)
 
 function stickNavbar() {
     if (window.scrollY > header.offsetHeight + 150) {
@@ -52,6 +52,53 @@ function stickNavbar() {
     }
 }
 
+const products = document.querySelectorAll(".box");
+
+window.addEventListener("scroll", scrollProduct);
+
+function scrollProduct() {
+  const scrollTotal = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  
+  products.forEach((product) => {
+    if (document.documentElement.scrollTop / scrollTotal > 0.2) {
+      product.classList.add("show-product");
+    } else {
+      product.classList.remove("show-product");
+    }
+  });
+}
+
+const products2 = document.querySelectorAll(".box2");
+
+window.addEventListener("scroll", scrollProduct2);
+
+function scrollProduct2() {
+  const scrollTotal = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  
+  products2.forEach((product) => {
+    if (document.documentElement.scrollTop / scrollTotal > 0.5) {
+      product.classList.add("show-product");
+    } else {
+      product.classList.remove("show-product");
+    }
+  });
+}
+
+const products3 = document.querySelectorAll(".box3");
+
+window.addEventListener("scroll", scrollProduct3);
+
+function scrollProduct3() {
+  const scrollTotal = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  
+  products3.forEach((product) => {
+    if (document.documentElement.scrollTop / scrollTotal > 0.8) {
+      product.classList.add("show-product");
+    } else {
+      product.classList.remove("show-product");
+    }
+  });
+}
 
 
 
